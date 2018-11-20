@@ -43,11 +43,10 @@ Gem::Specification.new do |s|
 
   s.specification_version = 4
 
-  s.add_runtime_dependency(%q<mongoid>, [">= 3.0.0"])
-  s.add_development_dependency(%q<rake>, [">= 0"])
-  s.add_development_dependency(%q<rspec>, [">= 0"])
-  s.add_development_dependency(%q<yard>, [">= 0"])
-  s.add_development_dependency(%q<bundler>, [">= 1.0.0"])
-  s.add_development_dependency(%q<jeweler>, [">= 0"])
+  s.add_runtime_dependency(%q<mongoid>, "~> 7.0.0")
+  s.add_development_dependency(%q<rake>)
+  s.add_development_dependency(%q<rspec>)
+  s.add_development_dependency(%q<yard>)
+  s.add_development_dependency(%q<bundler>)
 end
 
