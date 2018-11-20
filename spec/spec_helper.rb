@@ -5,6 +5,8 @@ require 'rspec'
 require 'mongoid'
 require 'mongoid_taggable_with_context.rb'
 
+Mongo::Logger.logger.level = Logger::FATAL
+
 RSpec.configure do |config|
   config.after(:each) do
     Mongoid.purge!

@@ -292,11 +292,12 @@ module Mongoid::TaggableWithContext
     # @since 1.1.1
     def define_instance_tag_setter(context)
       generated_methods.module_eval do
-        re_define_method("#{context}_with_taggable=") do |value|
+        alias_method "#{context}_without_taggable=", "#{context}="
+        re_define_method("#{context}=") do |value|
           value = self.class.format_tags_for(context, value)
           self.send("#{context}_without_taggable=", value)
         end
-        alias_method_chain "#{context}=", :taggable
+        #alias_method_chain "#{context}=", :taggable
       end
     end
 
